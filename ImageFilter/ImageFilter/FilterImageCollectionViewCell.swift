@@ -10,4 +10,6 @@ import UIKit
 
 class FilterImageCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var filterLabel: UILabel!
 }

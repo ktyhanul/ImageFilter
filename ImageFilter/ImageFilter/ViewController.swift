@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var filterButton: UIBarButtonItem!
     @IBOutlet weak var imageButton: UIBarButtonItem!
     let imagePicker = UIImagePickerController()
+    var filterCollection: FilterCollectionViewController?
+    var filterDelegate: FilterDelegate?
     
     @IBAction func imageButtonAction(_ sender: UIBarButtonItem) {
         
@@ -41,6 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
+            filterDelegate?.reloadCollection()
         }
         dismiss(animated: true, completion: nil)
 
@@ -48,6 +51,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FilterCollection" {
+            filterCollection = segue.destination as? FilterCollectionViewController
+            filterCollection?.imageDelegate = self
+            filterDelegate = filterCollection
+        }
+    }
+    
+    func getImage() -> UIImage? {
+        return imageView.image
     }
 }
 
