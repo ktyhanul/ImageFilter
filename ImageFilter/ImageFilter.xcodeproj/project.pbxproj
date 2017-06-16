@@ -14,6 +14,10 @@
 		084F6D831EF2530C00BFD294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 084F6D811EF2530C00BFD294 /* LaunchScreen.storyboard */; };
 		084F6D8E1EF2530C00BFD294 /* ImageFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F6D8D1EF2530C00BFD294 /* ImageFilterTests.swift */; };
 		084F6D991EF2530C00BFD294 /* ImageFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F6D981EF2530C00BFD294 /* ImageFilterUITests.swift */; };
+		08DCC8281EF3874100FDC4E8 /* FilterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DCC8271EF3874100FDC4E8 /* FilterCollectionViewController.swift */; };
+		08DCC82A1EF3875C00FDC4E8 /* FilterImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DCC8291EF3875C00FDC4E8 /* FilterImageCollectionViewCell.swift */; };
+		08DCC82C1EF3AB8200FDC4E8 /* FilterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DCC82B1EF3AB8200FDC4E8 /* FilterDelegate.swift */; };
+		08DCC82E1EF3D20000FDC4E8 /* ImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DCC82D1EF3D20000FDC4E8 /* ImageDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		084F6D941EF2530C00BFD294 /* ImageFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		084F6D981EF2530C00BFD294 /* ImageFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterUITests.swift; sourceTree = "<group>"; };
 		084F6D9A1EF2530C00BFD294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08DCC8271EF3874100FDC4E8 /* FilterCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewController.swift; sourceTree = "<group>"; };
+		08DCC8291EF3875C00FDC4E8 /* FilterImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		08DCC82B1EF3AB8200FDC4E8 /* FilterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDelegate.swift; sourceTree = "<group>"; };
+		08DCC82D1EF3D20000FDC4E8 /* ImageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				084F6D781EF2530C00BFD294 /* AppDelegate.swift */,
 				084F6D7A1EF2530C00BFD294 /* ViewController.swift */,
+				08DCC8271EF3874100FDC4E8 /* FilterCollectionViewController.swift */,
+				08DCC82D1EF3D20000FDC4E8 /* ImageDelegate.swift */,
+				08DCC82B1EF3AB8200FDC4E8 /* FilterDelegate.swift */,
+				08DCC8291EF3875C00FDC4E8 /* FilterImageCollectionViewCell.swift */,
 				084F6D7C1EF2530C00BFD294 /* Main.storyboard */,
 				084F6D7F1EF2530C00BFD294 /* Assets.xcassets */,
 				084F6D811EF2530C00BFD294 /* LaunchScreen.storyboard */,
@@ -262,8 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DCC8281EF3874100FDC4E8 /* FilterCollectionViewController.swift in Sources */,
 				084F6D7B1EF2530C00BFD294 /* ViewController.swift in Sources */,
+				08DCC82A1EF3875C00FDC4E8 /* FilterImageCollectionViewCell.swift in Sources */,
 				084F6D791EF2530C00BFD294 /* AppDelegate.swift in Sources */,
+				08DCC82E1EF3D20000FDC4E8 /* ImageDelegate.swift in Sources */,
+				08DCC82C1EF3AB8200FDC4E8 /* FilterDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +530,7 @@
 				084F6D9F1EF2530C00BFD294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		084F6DA01EF2530C00BFD294 /* Build configuration list for PBXNativeTarget "ImageFilterTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +539,7 @@
 				084F6DA21EF2530C00BFD294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		084F6DA31EF2530C00BFD294 /* Build configuration list for PBXNativeTarget "ImageFilterUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +548,7 @@
 				084F6DA51EF2530C00BFD294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
